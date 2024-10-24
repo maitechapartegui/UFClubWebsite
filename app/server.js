@@ -1,13 +1,8 @@
 const express = require('express');
-<<<<<<< HEAD
 const cors = require('cors');
 const path = require('path');
 const app = express();
 const port = 8080;
-=======
-const cors = require('cors')
-const app = express();
->>>>>>> d2933cc60d37f27d973f9fd41faba5eb5f0ffc4b
 
 app.use(cors());
 
@@ -17,7 +12,6 @@ app.use('/login', (req, res) => {
   });
 });
 
-<<<<<<< HEAD
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {
@@ -38,6 +32,3 @@ app.get('/index/', (req, res) => {
 })
 
 app.listen(port, () => console.log(`API is running on http://localhost:${port}`));
-=======
-app.listen(8080, () => console.log('API is running on http://localhost:8080/login'));
->>>>>>> d2933cc60d37f27d973f9fd41faba5eb5f0ffc4b
