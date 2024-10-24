@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, NavLink, Route, Routes } from 'react-router-dom';
 import Navbar from '../navbar';
 import Dashboard from '../../pages/Dashboard/Dashboard';
 import Calendar from '../../pages/Calendar/Calendar';
@@ -16,6 +16,13 @@ function App() {
   if(!token) {
     return <Login setToken={setToken} />
   }
+  // Protected Route wrapper component
+  const ProtectedRoute = ({ children }) => {
+    if (!token) {
+      return <NavLink to="/login" />;
+    }
+    return children;
+  };
 
   return (
       <BrowserRouter>
