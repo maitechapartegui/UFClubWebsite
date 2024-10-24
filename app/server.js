@@ -6,7 +6,10 @@ const port = 8080;
 
 app.use(cors());
 
-app.use('/login', (req, res) => {
+app.post('/login', (req, res) => {
+  //TODO
+
+  //CURRENTLY FOR TESTING
   res.send({
     token: 'test123'
   });
