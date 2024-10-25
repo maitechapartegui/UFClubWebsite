@@ -11,7 +11,7 @@ app.post('/login', (req, res) => {
 
   //CURRENTLY FOR TESTING
   res.send({
-    token: 'test123'
+    token: true
   });
 });
 

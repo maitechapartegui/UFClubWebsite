@@ -28,9 +28,6 @@ function Navbar() {
                     <NavLink to="/profile" activeStyle>
                         Profile
                     </NavLink>
-                    <NavLink to="/sign-up" activeStyle>
-                        Sign Up
-                    </NavLink>
                 </NavMenu>
                 <NavBtn>
                     <NavBtnLink to="/signin">
