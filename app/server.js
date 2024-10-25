@@ -2,12 +2,16 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const app = express();
+const bodyParser = require('body-parser')
 const port = 8080;
 
 app.use(cors());
+app.use(bodyParser.json());
 
 app.post('/login', (req, res) => {
   //TODO
+  const username = req.body.username
+  const password = req.body.password
 
   //CURRENTLY FOR TESTING
   res.send({
